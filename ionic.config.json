@@ -1,0 +1,8 @@
+{
+  "name": "WunderPersonList",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "60530038"
+}
