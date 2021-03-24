@@ -13,11 +13,10 @@ export class ViewMessagePage implements OnInit {
   constructor(
     private data: DataService,
     private activatedRoute: ActivatedRoute
-  ) { }
+  ) {}
 
   ngOnInit() {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.message = this.data.getMessageById(parseInt(id, 10));
   }
 
   getBackButtonText() {

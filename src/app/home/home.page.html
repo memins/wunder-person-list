@@ -1,25 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Inbox
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-  
-  <ion-header collapse="condense">
+<div class="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">
-        Inbox
+      <ion-title>
+        <b class="profiles"> PROFILES</b>
       </ion-title>
     </ion-toolbar>
   </ion-header>
-  
-  <ion-list>
-    <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
-  </ion-list>
-</ion-content>
+  <ion-content>
+    <ion-list>
+      <ion-item
+        *ngFor="let user of data ; let i = index"
+        style="padding: 0 24px"
+      >
+        <ion-avatar class="img" slot="start">
+          <ion-img [src]="user.picture.medium"></ion-img>
+        </ion-avatar>
+        {{user.name.first}} , {{user.dob.age}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</div>

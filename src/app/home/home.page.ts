@@ -1,22 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataService, Message } from '../services/data.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
-  constructor(private data: DataService) {}
+export class HomePage implements OnInit {
+  data: any;
 
-  refresh(ev) {
-    setTimeout(() => {
-      ev.detail.complete();
-    }, 3000);
+  constructor(
+    private dataService: DataService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit() {
+    this.data = this.dataService.getAll();
   }
 
-  getMessages(): Message[] {
-    return this.data.getMessages();
-  }
-
+  /*goToUserDetailPage(data): void {
+    this.router.navigate(['./user-detail'], {
+      relativeTo: this.route,
+      queryParams: { user: JSON.stringify(data) },
+    });
+  }*/
 }
