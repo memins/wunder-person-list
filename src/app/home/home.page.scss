@@ -1,3 +1,7 @@
+.toolbar-container {
+  margin: 10px 0;
+}
+
 .path {
   width: 28px;
   height: 1px;
@@ -28,4 +32,5 @@ ion-item {
   line-height: normal;
   letter-spacing: normal;
   color: #6374f3;
+  cursor: pointer;
 }

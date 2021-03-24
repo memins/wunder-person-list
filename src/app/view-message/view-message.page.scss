@@ -1,6 +1,9 @@
 ion-item {
   --inner-padding-end: 0;
   --background: transparent;
+  border-radius: unset !important;
+  --border-width: unset !important;
+  --border-style: unset !important;
 }
 
 ion-label {
@@ -29,6 +32,17 @@ ion-item ion-note {
   font-weight: normal;
 }
 
+.profiles {
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #b1b8c5;
+}
+
 h1 {
   margin: 0;
   font-weight: bold;
@@ -37,4 +51,65 @@ h1 {
 
 p {
   line-height: 22px;
+}
+
+.pexels {
+  width: 100px;
+  height: 100px;
+  margin: 33px 18px 25px 24px;
+}
+
+.name {
+  height: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b1b8c5;
+}
+
+.fullname {
+  width: 148px;
+  height: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #6374f3;
+}
+
+.bottom-info {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  width: 100%;
+  justify-content: space-around;
+  border-top: 1px solid #dbe0e5;
+}
+
+.gender-info {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #dbe0e9;
+
+  .gender {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+}
+
+.age-info {
+  display: flex;
+  flex-direction: column;
+
+  .age {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
 }

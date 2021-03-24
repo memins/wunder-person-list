@@ -20,10 +20,17 @@ export class HomePage implements OnInit {
     this.data = this.dataService.getAll();
   }
 
-  /*goToUserDetailPage(data): void {
+  refresh(ev) {
+    setTimeout(() => {
+      ev.detail.complete();
+    }, 3000);
+  }
+
+
+  goToUserDetailPage(data): void {
     this.router.navigate(['./user-detail'], {
       relativeTo: this.route,
       queryParams: { user: JSON.stringify(data) },
     });
-  }*/
+  }
 }

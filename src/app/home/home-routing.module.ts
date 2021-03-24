@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage
+  },
+  {
+    path: 'user-detail',
+    loadChildren: () => import('../view-message/view-message.module').then( m => m.ViewMessagePageModule)
   }
 ];
 
